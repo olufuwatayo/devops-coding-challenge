@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+remote_url=$1
+system_time=$(date +%s)
+# system_time=$(ntpdate -q)
+remote_time=$(curl --silent $remote_url)
+
+if [ $? -ne 0 ]; then
+  echo "invalid url"
+  exit 1
+fi
+
+time_diff=$(($system_time-$remote_time))
+echo "Time difference is $time_diff"
+
+if [[ $time_diff -lt -1 || $time_diff -gt 1 ]]; then
+    echo "The time seems to be off more than a sec"
+    exit 1
+fi
+
+echo "time is within accepatable range"
+exit 0
