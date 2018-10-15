@@ -1,27 +1,26 @@
 resource "aws_network_acl" "Engage-vpc-network-acl" {
-    vpc_id = "${aws_vpc.Engage-vpc.id}"
-    subnet_ids = ["${aws_subnet.Engage-vpc-subnet1.id}", "${aws_subnet.Engage-vpc-subnet2.id}"]
-    
-    egress {
-        protocol   = "-1"
-        rule_no    = 100
-        action     = "allow"
-        cidr_block = "0.0.0.0/0"
-        from_port  = 0
-        to_port    = 0
-    }
+  vpc_id     = "${aws_vpc.Engage-vpc.id}"
+  subnet_ids = ["${aws_subnet.Engage-vpc-subnet1.id}", "${aws_subnet.Engage-vpc-subnet2.id}"]
 
-    ingress {
-        protocol   = "-1"
-        rule_no    = 100
-        action     = "allow"
-        cidr_block = "0.0.0.0/0"
-        from_port  = 0
-        to_port    = 0
-    }
+  egress {
+    protocol   = "-1"
+    rule_no    = 100
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 0
+    to_port    = 0
+  }
 
-    tags {
-        Name = "Engage-vpc-network-acl"
-    }
+  ingress {
+    protocol   = "-1"
+    rule_no    = 100
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 0
+    to_port    = 0
+  }
+
+  tags {
+    Name = "Engage-vpc-network-acl"
+  }
 }
-

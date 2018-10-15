@@ -16,23 +16,23 @@ variable "ecs-key-pair-name" {}
 //----------------------------------------------------------------------
 
 variable "autoscaling-group-name" {
-    default     = "Engage-ecs-asg"
+  default = "Engage-ecs-asg"
 }
 
 variable "max-instance-size" {
-    default     = 5
+  default = 5
 }
 
 variable "min-instance-size" {
-    default     = 1
+  default = 1
 }
 
 variable "desired-capacity" {
-    default     = 1
+  default = 1
 }
 
 variable "health-check-grace-period" {
-    default     = 300
+  default = 300
 }
 
 //----------------------------------------------------------------------
@@ -40,11 +40,11 @@ variable "health-check-grace-period" {
 //----------------------------------------------------------------------
 
 variable "load-balancer-name" {
-    default     = "Engage-load-balancer"
+  default = "Engage-load-balancer"
 }
 
 variable "target-group-name" {
-    default     = "Engage-ecs-target-group"
+  default = "Engage-ecs-target-group"
 }
 
 //----------------------------------------------------------------------
@@ -52,13 +52,13 @@ variable "target-group-name" {
 //----------------------------------------------------------------------
 
 variable "launch-configuration-name" {
-    default = "Engage-ecs-launch-configuration"
+  default = "Engage-ecs-launch-configuration"
 }
 
 variable "image-id" {
-    default = "ami-d61027ad"
+  default = "ami-d61027ad"
 }
 
 variable "instance-type" {
-    default = "t2.micro"
+  default = "t2.micro"
 }

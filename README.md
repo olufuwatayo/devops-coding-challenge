@@ -1,14 +1,25 @@
-DevOps Coding Test
-==================
-# Bootstrapping  the webservice 
-* Clone this repo.
+# devops-coding-challenge
 
-* Ensure you have Terraform installed on your machine and you have aws cli confugured.
 
-* Run terraform plan.
-* Run Terraform apply
 
-# Health Check
 
-* Make the script executable by running chmod +x healthcheckscript
-* Then run ./healthcheckscript "load_balancer_url_without_qoute"
+### Installation
+
+This requires [Terraform](https://www.terraform.io/) 0.11.7  +  and [aws cli] (https://aws.amazon.com/cli/) to run.
+
+
+```sh
+$ cd devops-coding-challenge
+$ aws configure 
+$ terraform plan.
+$ Terraform apply
+```
+
+
+### Health Check
+
+```sh
+$ chmod +x healthcheckscript
+$ ./healthcheckscript "load_balancer_url_without_qoute"
+```
+
