@@ -1,0 +1,15 @@
+[
+    {
+        "environment": [],
+        "name": "Engage_Time",
+        "image": "133178826137.dkr.ecr.us-east-1.amazonaws.com/engage",
+        "cpu": 10,
+        "memory": 500,
+        "portMappings": [
+            {
+                "containerPort": 80,
+                "hostPort": 80
+            }
+        ]
+    }
+]
